@@ -1,0 +1,26 @@
+=== TRACE SUMMARY FOR multi_hop2.txt===
+
+=== SPAN SUMMARY === 
+                       operation  duration_ms  is_error
+                    llm.generate     1858.339     False
+                    llm.generate     2332.411     False
+MCP send tools/call search_books        8.046     False
+MCP send tools/call search_books        1.920     False
+MCP send tools/call search_books        1.734     False
+MCP send tools/call search_books       27.918     False
+                catalogue.search        0.050     False
+                catalogue.search        0.029     False
+                catalogue.search        0.025     False
+                catalogue.search        0.024     False
+         tools/call search_books        1.286     False
+         tools/call search_books        0.319     False
+         tools/call search_books        0.189     False
+         tools/call search_books       26.793     False
+                    llm.generate     2945.338     False
+                       user_turn     7181.008     False
+
+=== LLM USAGE ===
+   operation           model  input_tokens  output_tokens
+llm.generate claude-sonnet-5         690.0           48.0
+llm.generate claude-sonnet-5         754.0          195.0
+llm.generate claude-sonnet-5        1411.0          295.0

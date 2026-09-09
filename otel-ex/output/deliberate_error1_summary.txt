@@ -1,0 +1,30 @@
+ To what extent does W3C Trace Context propagation in the MCP specification
+enable OpenTelemetry-based observability of agentic tool-use workflows? This
+question is examined through two sub-questions:
+
+SQ1 What telemetry data becomes available through W3C Trace Context prop-
+agation in MCP? This examines whether trace context allows spans from 
+service calls to be correlated into a single execution trace. It focuses on
+the practical visibility gained, including request lineage, parent-child span
+relationships, tool-call boundaries, latency, token usage and domain-specific
+attributes such as catalog lookup outcomes.
+
+
+SQ2 To what extent can OpenTelemetry tracing represent the non-deterministic
+and multi-step characteristics of agentic workflows? This evaluates whether
+the resulting traces can reconstruct how an agent moves from user request
+to model reasoning, tool selection, tool execution, retry behaviour, and
+final response. It focuses on how well OpenTelemetry captures branching,
+repeated parameter attempts, failure propagation, and diagnostic context
+in workflows where the LLM may make different decisions across runs
+
+demonstrates a more complex interaction requiring three sequential tool calls before the agent produced a final answer. Three distinct llm.generate spans are visible followed by a corresponding search\_books call.  Because every span in this sequence shares a single user\_turn parent and trace ID, the full multi-step reasoning path - including the fact that the model chose to re-invoke the same tool multiple times - remains reconstructible as a single ordered sequence, rather than appearing as three disconnected, individually-logged events. This addresses the second RQ clause: OpenTelemetry-based tracing, utilising MCP's propagated context, successfully follows a multi-step, non-deterministic reasoning path without losing the link between iterations.
+
+
+Table~\ref{tab:trace-spans-3} presents a fault scenario, in which two spans are flagged with \texttt{is_error = TRUE}: \texttt{catalogue.isbn_lookup} (4.631~ms) and its enclosing \texttt{tools/call broken_lookup} (8.116~ms). 
+Both error spans share the same trace ID as the surrounding \texttt{llm.generate} and \texttt{user_turn} spans, meaning the failure can be attributed not merely to "a tool call failed," but to a specific point within a specific reasoning turn - the second \texttt{llm.generate} call in this trace, which produced the input argument that triggered the failure. Table~\ref{tab:llm-usage-3} corroborates this at the token level: the two \texttt{llm.generate} calls in this trace consumed 709 and 981 input tokens respectively, allowing the token cost of the reasoning leading up to the fault to be isolated and quantified directly from trace data. This combination of span-level linking and token-level cost accounting is the capability investigated by the research question, and this research demonstrates it is made possible by trace-context propagation.
+
+
+
+This thesis set out to examine what the incorporation of W3C Trace Context propagation into the Model Context Protocol actually makes observable in agentic tool-use workflows, and the extent to which OpenTelemetry-based tracing can follow the multi-step reasoning characteristics of such systems. Developing a system consisting of a claude-driven agent, an MCP Client and MPC Server and OTel instrumentation this thesis has shown that propagated trace context allows spans generated independently by two separate processes to be reconstructed into a single linked trace without requiring shared process state or manual log correlation. 
+The demonstration  

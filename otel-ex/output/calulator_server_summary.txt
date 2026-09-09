@@ -1,0 +1,10 @@
+=== TRACE SUMMARY FOR calulator_server.txt===
+
+=== SPAN SUMMARY === 
+                operation  duration_ms  is_error
+MCP send tools/call power        5.020     False
+                user_turn     3342.935     False
+         tools/call power        0.711     False
+
+=== LLM USAGE ===
+No LLM token usage found.

@@ -1,0 +1,324 @@
+{
+    "data": [
+        {
+            "traceID": "528475aab4c11e1f4356e23fd979f920",
+            "spans": [
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "3cf267fe996be924",
+                    "operationName": "catalogue.search",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "528475aab4c11e1f4356e23fd979f920",
+                            "spanID": "5097b5111e932a3b"
+                        }
+                    ],
+                    "startTime": 1788704452416541,
+                    "duration": 35,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "bookshop.match_count",
+                            "type": "int64",
+                            "value": 4
+                        },
+                        {
+                            "key": "bookshop.query",
+                            "type": "string",
+                            "value": "python"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "5097b5111e932a3b",
+                    "operationName": "tools/call search_books",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "528475aab4c11e1f4356e23fd979f920",
+                            "spanID": "92b19139eed1f38d"
+                        }
+                    ],
+                    "startTime": 1788704452415734,
+                    "duration": 1392,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "search_books"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "4"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "e4866dc93827e67a",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "528475aab4c11e1f4356e23fd979f920",
+                            "spanID": "ec4bb0a7c1f3d331"
+                        }
+                    ],
+                    "startTime": 1788704449352520,
+                    "duration": 3055809,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 687
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 204
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "c0aeae5f58c1caf3",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "528475aab4c11e1f4356e23fd979f920",
+                            "spanID": "ec4bb0a7c1f3d331"
+                        }
+                    ],
+                    "startTime": 1788704452419198,
+                    "duration": 3486037,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "end_turn"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 1054
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 310
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "ec4bb0a7c1f3d331",
+                    "operationName": "user_turn",
+                    "references": [],
+                    "startTime": 1788704449352214,
+                    "duration": 6553293,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "user.prompt_length",
+                            "type": "int64",
+                            "value": 26
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "528475aab4c11e1f4356e23fd979f920",
+                    "spanID": "92b19139eed1f38d",
+                    "operationName": "MCP send tools/call search_books",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "528475aab4c11e1f4356e23fd979f920",
+                            "spanID": "ec4bb0a7c1f3d331"
+                        }
+                    ],
+                    "startTime": 1788704452410089,
+                    "duration": 8363,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "4"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "mcp-server-bookshop",
+                    "tags": [
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "a49c86dd-a561-4399-8c58-e2b799827858"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "python"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.44.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "bookshop-agent",
+                    "tags": [
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "a8e912fe-ef80-4d5e-9bdb-970ccfdaf66f"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "python"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.44.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

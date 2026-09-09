@@ -1,0 +1,15 @@
+=== TRACE SUMMARY FOR single_tool_call2.txt===
+
+=== SPAN SUMMARY === 
+                       operation  duration_ms  is_error
+                    llm.generate     1859.526     False
+                    llm.generate     1980.333     False
+                       user_turn     3899.684     False
+MCP send tools/call search_books       48.470     False
+                catalogue.search        0.225     False
+         tools/call search_books        6.595     False
+
+=== LLM USAGE ===
+   operation           model  input_tokens  output_tokens
+llm.generate claude-sonnet-5         697.0           54.0
+llm.generate claude-sonnet-5         818.0           84.0

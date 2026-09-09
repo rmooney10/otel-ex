@@ -1,0 +1,18 @@
+=== TRACE SUMMARY FOR deliberate_error2.txt===
+
+=== SPAN SUMMARY === 
+                        operation  duration_ms  is_error
+                     llm.generate     5182.739     False
+ MCP send tools/call search_books        8.441     False
+MCP send tools/call broken_lookup       12.323     False
+                 catalogue.search        0.066     False
+            catalogue.isbn_lookup        8.072      True
+          tools/call search_books        1.400     False
+         tools/call broken_lookup       11.067      True
+                     llm.generate     4496.648     False
+                        user_turn     9703.741     False
+
+=== LLM USAGE ===
+   operation           model  input_tokens  output_tokens
+llm.generate claude-sonnet-5         709.0          203.0
+llm.generate claude-sonnet-5         997.0          288.0

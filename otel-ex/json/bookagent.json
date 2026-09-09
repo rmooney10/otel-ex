@@ -1,0 +1,1312 @@
+{
+    "data": [
+        {
+            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+            "spans": [
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "a0abee44ecfc5f1c",
+                    "operationName": "MCP send tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692756889794,
+                    "duration": 1368,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "9"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "cba4f8be0f51b759",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692743617375,
+                    "duration": 2614584,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 1058
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "f26ba6f729e39347",
+                    "operationName": "MCP send tools/call search_books",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692743572563,
+                    "duration": 6003,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "3"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "9318259da03fc206",
+                    "operationName": "catalogue.isbn_lookup",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "ffe77c5aff4daf62"
+                        }
+                    ],
+                    "startTime": 1788692751147640,
+                    "duration": 10,
+                    "tags": [
+                        {
+                            "key": "bookshop.isbn",
+                            "type": "string",
+                            "value": "978-1-59327-928-8"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "e519ce1c01845d5d",
+                    "operationName": "catalogue.recommend",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "f584d58e449185e5"
+                        }
+                    ],
+                    "startTime": 1788692751149641,
+                    "duration": 7,
+                    "tags": [
+                        {
+                            "key": "bookshop.book_id",
+                            "type": "string",
+                            "value": "1"
+                        },
+                        {
+                            "key": "bookshop.found",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "0c07eef0049cc083",
+                    "operationName": "catalogue.recommend",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "ee4aa4d5552b5ec7"
+                        }
+                    ],
+                    "startTime": 1788692754911174,
+                    "duration": 36,
+                    "tags": [
+                        {
+                            "key": "bookshop.book_id",
+                            "type": "string",
+                            "value": "9781593279288"
+                        },
+                        {
+                            "key": "bookshop.found",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "94257709d26847cf",
+                    "operationName": "catalogue.recommend",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "b8cbc5610256395f"
+                        }
+                    ],
+                    "startTime": 1788692756890580,
+                    "duration": 6,
+                    "tags": [
+                        {
+                            "key": "bookshop.book_id",
+                            "type": "string",
+                            "value": "Python Crash Course"
+                        },
+                        {
+                            "key": "bookshop.found",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "ee4aa4d5552b5ec7",
+                    "operationName": "tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "d2b1657057cbb87c"
+                        }
+                    ],
+                    "startTime": 1788692754910605,
+                    "duration": 976,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "get_recommendations"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "7"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "1c82c3ae620ef3d4",
+                    "operationName": "user_turn",
+                    "references": [],
+                    "startTime": 1788692740722553,
+                    "duration": 18516363,
+                    "tags": [
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        },
+                        {
+                            "key": "user.prompt_length",
+                            "type": "int64",
+                            "value": 26
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "348f5c9b52797067",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692740722694,
+                    "duration": 2847219,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 688
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 206
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "39957fa37adec587",
+                    "operationName": "MCP send tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692746232133,
+                    "duration": 1273,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "4"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "6e7149cd96202474",
+                    "operationName": "catalogue.search",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "084cf107c99704c0"
+                        }
+                    ],
+                    "startTime": 1788692743576884,
+                    "duration": 24,
+                    "tags": [
+                        {
+                            "key": "bookshop.match_count",
+                            "type": "int64",
+                            "value": 4
+                        },
+                        {
+                            "key": "bookshop.query",
+                            "type": "string",
+                            "value": "Python"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "ffe77c5aff4daf62",
+                    "operationName": "tools/call broken_lookup",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "12cf430b2290c9e6"
+                        }
+                    ],
+                    "startTime": 1788692751147479,
+                    "duration": 320,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "broken_lookup"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "5"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "f584d58e449185e5",
+                    "operationName": "tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "39d1bcd7289af708"
+                        }
+                    ],
+                    "startTime": 1788692751149569,
+                    "duration": 140,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "get_recommendations"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "6"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "6fd97c3c818f5f35",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692751150167,
+                    "duration": 3757396,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 1824
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 267
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "d2b1657057cbb87c",
+                    "operationName": "MCP send tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692754908270,
+                    "duration": 4746,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "7"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "00b88826add0e23e",
+                    "operationName": "tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "5f567fbc7ba24ca9"
+                        }
+                    ],
+                    "startTime": 1788692756886582,
+                    "duration": 540,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "get_recommendations"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "8"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "eb118a013c367d5d",
+                    "operationName": "catalogue.recommend",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "47e020bef7e72c82"
+                        }
+                    ],
+                    "startTime": 1788692746232902,
+                    "duration": 8,
+                    "tags": [
+                        {
+                            "key": "bookshop.book_id",
+                            "type": "string",
+                            "value": "978-1-59327-928-8"
+                        },
+                        {
+                            "key": "bookshop.found",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "47e020bef7e72c82",
+                    "operationName": "tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "39957fa37adec587"
+                        }
+                    ],
+                    "startTime": 1788692746232814,
+                    "duration": 185,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "get_recommendations"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "4"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "052834f3d40ec543",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692746234139,
+                    "duration": 4911954,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 1284
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 450
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "39d1bcd7289af708",
+                    "operationName": "MCP send tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692751149105,
+                    "duration": 978,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "6"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "0d99ead2489f947e",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692754913310,
+                    "duration": 1970579,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "tool_use"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 2113
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 133
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "5e53f29e3c452cd0",
+                    "operationName": "llm.generate",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692756891307,
+                    "duration": 2347583,
+                    "tags": [
+                        {
+                            "key": "llm.model",
+                            "type": "string",
+                            "value": "claude-sonnet-5"
+                        },
+                        {
+                            "key": "llm.stop_reason",
+                            "type": "string",
+                            "value": "end_turn"
+                        },
+                        {
+                            "key": "llm.usage.input_tokens",
+                            "type": "int64",
+                            "value": 2364
+                        },
+                        {
+                            "key": "llm.usage.output_tokens",
+                            "type": "int64",
+                            "value": 160
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.agent"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "5f567fbc7ba24ca9",
+                    "operationName": "MCP send tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692756884597,
+                    "duration": 4832,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "8"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "084cf107c99704c0",
+                    "operationName": "tools/call search_books",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "f26ba6f729e39347"
+                        }
+                    ],
+                    "startTime": 1788692743576447,
+                    "duration": 1341,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "search_books"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "3"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "12cf430b2290c9e6",
+                    "operationName": "MCP send tools/call broken_lookup",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "1c82c3ae620ef3d4"
+                        }
+                    ],
+                    "startTime": 1788692751146372,
+                    "duration": 1967,
+                    "tags": [
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "5"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "627371bf1742f19b",
+                    "operationName": "catalogue.recommend",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "00b88826add0e23e"
+                        }
+                    ],
+                    "startTime": 1788692756886838,
+                    "duration": 33,
+                    "tags": [
+                        {
+                            "key": "bookshop.book_id",
+                            "type": "string",
+                            "value": "python-crash-course"
+                        },
+                        {
+                            "key": "bookshop.found",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "bookshop.related_count",
+                            "type": "int64",
+                            "value": 2
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "bookshop.server"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                    "spanID": "b8cbc5610256395f",
+                    "operationName": "tools/call get_recommendations",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "09fbd2686d0cab1daa0b667befb53127",
+                            "spanID": "a0abee44ecfc5f1c"
+                        }
+                    ],
+                    "startTime": 1788692756890503,
+                    "duration": 158,
+                    "tags": [
+                        {
+                            "key": "gen_ai.operation.name",
+                            "type": "string",
+                            "value": "execute_tool"
+                        },
+                        {
+                            "key": "gen_ai.tool.name",
+                            "type": "string",
+                            "value": "get_recommendations"
+                        },
+                        {
+                            "key": "jsonrpc.request.id",
+                            "type": "string",
+                            "value": "9"
+                        },
+                        {
+                            "key": "mcp.method.name",
+                            "type": "string",
+                            "value": "tools/call"
+                        },
+                        {
+                            "key": "mcp.protocol.version",
+                            "type": "string",
+                            "value": "2026-07-28"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "mcp-python-sdk"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "bookshop-agent",
+                    "tags": [
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "cbb26865-4b1f-4fc3-853e-e675d6c27b5d"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "python"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.44.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "mcp-server-bookshop",
+                    "tags": [
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "565bdf1e-7220-407c-a4fb-7f98024a240b"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "python"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.44.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}
